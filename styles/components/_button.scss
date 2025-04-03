@@ -1,0 +1,19 @@
+.button {
+  font-weight: var(--font-weight-high);
+  padding: 0.7em 1em;
+  border-radius: 1em;
+  transition: scale 0.4s;
+
+  @include hover() {
+    scale: 1.05;
+  }
+
+  &:active {
+    transition: scale 0.05s;
+    scale: 0.95;
+  }
+
+  &--icon {
+    padding: 1.2em;
+  }
+}

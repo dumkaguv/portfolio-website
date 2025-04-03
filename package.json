@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "sass": "^1.85.0"
+  },
+  "scripts": {
+    "prefix": "postcss ./styles/main.css --use autoprefixer -o ./styles/main_prefixed.css",
+    "watch": "npx chokidar \"./styles/main.css\" -c \"npm run prefix\" --usePolling"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.0"
+  }
+}

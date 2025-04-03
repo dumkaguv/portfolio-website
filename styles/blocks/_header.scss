@@ -1,0 +1,169 @@
+.header {
+  --smallHeight: calc(var(--header-height) / 1.7);
+
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+  height: var(--header-height);
+  padding-inline: var(--padding-inline);
+  padding-block: 0;
+  color: var(--color-accent);
+  transform: translateY(-100%);
+  transition: height 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  body.loaded & {
+    animation: header--appearing 0.5s var(--header-appearing-delay) both;
+  }
+
+  &--small {
+    height: var(--smallHeight);
+  }
+
+  @include desktop-s {
+    --smallHeight: calc(var(--header-height) / 1.5);
+
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  @include tablet-s {
+    --smallHeight: var(--header-height);
+    
+    flex-direction: column;
+    gap: 0;
+    overflow-y: clip;
+
+    &.open {
+      height: 100dvh;
+      overscroll-behavior: none;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &.open &__menu {
+      display: block;
+    }
+
+    &:not(.open) &__menu {
+      animation: hide 1ms 0.5s both;
+
+      @keyframes hide {
+        from {
+          display: block;
+        }
+        to {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__outer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    @include desktop-s {
+      padding-inline: 0;
+    }
+  }
+
+  &__logo-outer {
+    @include tablet-s {
+      display: flex;
+      align-self: stretch;
+      flex-shrink: 0;
+      justify-content: space-between;
+      align-items: center;
+      height: var(--header-height);
+    }
+  }
+
+  &__menu {
+    &-outer {
+      @include tablet-s {
+        flex-shrink: 0;
+        height: calc(100dvh - var(--header-height) - 1px);
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+
+      @include tablet-l {
+        column-gap: 0.5em;
+      }
+
+      @include tablet-s {
+        flex-direction: column;
+      }
+    }
+
+    &-link {
+      padding: 1em 1.2em;
+      position: relative;
+      z-index: 1;
+      transition: color 0.2s;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: "";
+        bottom: 0.4em;
+        left: 50%;
+        translate: calc(-50% + 0.05em);
+        width: 0;
+        height: 2px;
+        background-color: var(--color-accent);
+        border-radius: 5px;
+        transition: width 0.3s, height 0.2s;
+        z-index: -1;
+      }
+
+      @include hover {
+        &::before {
+          width: calc(100% - 0.7em);
+        }
+      }
+    }
+  }
+
+  &__burger-button {
+    display: none;
+
+    &::before {
+      display: block;
+      content: "";
+      height: 3px;
+      width: 60%;
+      border-radius: 5px;
+      background-color: var(--color-accent);
+      @include abs-center();
+      box-shadow: 0 9px var(--color-accent), 0 -9px var(--color-accent);
+    }
+
+    @include tablet-s {
+      display: block;
+      position: relative;
+    }
+  }
+
+  @keyframes header--appearing {
+    to {
+      transform: translateY(0);
+    }
+  }
+}

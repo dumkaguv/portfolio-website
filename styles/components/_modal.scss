@@ -1,0 +1,42 @@
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+
+  &.open {
+    display: block;
+  }
+  
+  &__content {
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    > img {
+      aspect-ratio: 16 / 11;
+      width: 100%;
+    }
+  }
+  
+  &__close-button {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    transition-duration: 0.25s;
+    cursor: pointer;
+
+    @include hover {
+      opacity: 0.4;
+    }
+  }
+}

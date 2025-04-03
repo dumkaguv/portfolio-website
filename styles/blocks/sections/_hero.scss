@@ -1,0 +1,100 @@
+.hero {
+  min-height: calc(100svh - var(--header-height));
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 100px;
+
+  @include tablet-l {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 50px;
+  }
+
+  @include tablet-s {
+    gap: 20px;
+  }
+
+  &__title {
+    position: relative;
+    overflow: hidden;
+
+    &-absolute {
+      overflow-anchor: none;
+
+      &-outer {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &-measures {
+      display: flex;
+      opacity: 0;
+      pointer-events: none;
+      user-select: none;
+
+      &-text {
+        flex-shrink: 1;
+        flex-grow: 0;
+        width: 100%;
+        margin-inline: -50%;
+        transform: translateX(50%);
+      }
+    }
+
+    & * {
+      font-size: var(--font-size-h1);
+      font-weight: var(--font-weight-high);
+    }
+
+    &-invisible {
+      color: transparent;
+    }
+
+    &--hiding {
+      animation: hiding 1.7s both;
+    }
+    
+    @keyframes hiding {
+      to {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__second {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__notebook {
+    @include tablet-l {
+      width: 100%;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+  }
+
+  &__explore-button {
+    opacity: 1;
+
+    body.loaded & {
+      animation: appearing .8s calc(var(--notebook-appearing-delay) + var(--notebook-top-opening-delay) + var(--notebook-screen-light-up-delay) + var(--hero-button-delay)) both;
+    }
+
+    &-outer {
+      display: flex;
+      justify-content: center;
+    }
+
+    @keyframes appearing {
+      from {
+        opacity: 0;
+        transform: translateY(50%);
+      }
+    }
+  }
+}

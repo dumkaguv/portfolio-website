@@ -1,0 +1,141 @@
+.slider {
+  --slideMaxWidth: 600px;
+  display: flex;
+  flex-direction: column;
+
+  @include desktop-s {
+    margin-inline: calc(var(--padding-inline) * -1);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    padding-inline: max(
+      calc((100% - var(--slideMaxWidth)) / 2),
+      var(--padding-inline)
+    );
+    gap: 30px;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #fff 100px,
+      #fff calc(100% - 100px),
+      transparent 100%
+    );
+    mask-size: 100% 200%;
+    mask-repeat: no-repeat;
+
+    @include desktop-s {
+      mask-image: none;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin: 15px 0 !important;
+    padding: 0;
+    width: 100%;
+    max-width: var(--slideMaxWidth);
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    container-type: size;
+    overflow: hidden;
+    transition: scale 0.7s;
+    scroll-snap-stop: always;
+    height: auto;
+
+    &:not([data-selected]) {
+      scale: 0.85;
+    }
+
+    &-link {
+      transition-duration: 0.2s;
+      &::after {
+        content: "";
+        width: 0.5em;
+        height: 0.5em;
+        margin-left: 0.3em;
+        margin-top: 0.1em;
+        background: url("../images/link.svg") 50% / contain no-repeat;
+        z-index: 1;
+      }
+
+      @include hover {
+        color: color-mix(in hsl, var(--color-accent), white 18%);
+
+      }
+    }
+  }
+
+  &__controls {
+    padding-top: 10px;
+    width: calc(100% - var(--padding-inline) * 2);
+    max-width: 600px;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > * {
+      margin: 0 !important;
+    }
+  }
+
+  &__rotate-right,
+  &__rotate-left {
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__rotate-left {
+    transform: scaleX(-1);
+  }
+
+  &__pagination {
+    &-list {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    &-item {
+      display: flex;
+    }
+
+    &-button {
+      padding: 15px;
+      background: transparent;
+      border: none;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 12px;
+        aspect-ratio: 1;
+        border: 3px solid var(--color-accent);
+        border-radius: 50%;
+        transition: background-color 0.3s;
+      }
+
+      &[data-selected]::after {
+        background-color: var(--color-accent);
+      }
+
+      @include hover() {
+        scale: 1.1;
+      }
+
+      &:active {
+        transition: scale 0.1s;
+        scale: 0.9;
+      }
+    }
+  }
+}

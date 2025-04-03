@@ -1,0 +1,26 @@
+@mixin clamp-font-size($min, $max, $from: 1600) {
+  font-size: clamp(#{$min}px, #{$max / $from * 100}vw, #{$max}px);
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  aspect-ratio: 1;
+}

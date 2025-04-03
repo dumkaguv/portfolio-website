@@ -1,0 +1,53 @@
+.portfolio {
+  .slider {
+    --slideMaxWidth: 1100px;
+
+    &__item {
+      display: flex;
+      padding: 20px;
+      gap: 40px;
+      aspect-ratio: 51 / 20;
+
+      @include tablet-s {
+        aspect-ratio: auto;
+        height: calc(220px + 55cqw);
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &-image {
+        border-radius: 10px;
+        min-width: 550px;
+        height: 100%;
+        cursor: pointer;
+
+        @include tablet-l {
+          min-width: 350px;
+        }
+
+        @include tablet-s {
+          width: 100cqw;
+          min-width: 0;
+        }
+
+        @include mobile-l {
+          height: 210px !important;
+        }
+
+        &-outer {
+          position: relative;
+        }
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include tablet-l {
+          gap: 10px;
+        }
+      }
+    }
+  }
+}

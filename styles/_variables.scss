@@ -1,0 +1,59 @@
+:root {
+  --color-light: #ffffff;
+  --color-light-trans: rgba(255, 255, 255, 0.93);
+  --color-light-alt: #f1f1f1;
+  --color-dark: #140e33;
+  --color-dark-trans: #140e3355;
+  --color-accent: #4332a1;
+  --color-accent-alt: #3c2d8f;
+
+  --header-appearing-delay: 0.7s;
+  --header-logo-delay: 7s;
+  --notebook-appearing-delay: 1.1s;
+  --notebook-top-opening-delay: 0.8s;
+  --notebook-screen-light-up-delay: 0.6s;
+  --hero-button-delay: 1s;
+
+  --glass-shadow: 0 4px 10px var(--color-dark-trans);
+  --glass-border: 3px solid var(--color-light-alt);
+
+  --font-family-base: "Nunito", sans-serif;
+  --font-weight-base: 400;
+  --font-weight-high: 700;
+  --line-height-base: 1.2;
+
+  --font-size-h1: 60px;
+  --font-size-h2: 48px;
+  --font-size-base: 26px;
+
+  --header-height: 160px;
+  --padding-inline: 50px;
+
+  @include desktop-s {
+    --font-size-h1: 50px;
+    --font-size-h2: 42px;
+    --font-size-base: 24px;
+
+    --header-height: 120px;
+    --padding-inline: 30px;
+  }
+
+  @include tablet-l {
+    --font-size-h1: 42px;
+    --font-size-h2: 36px;
+    --font-size-base: 22px;
+  }
+
+  @include tablet-s {
+    --font-size-h1: 32px;
+    --font-size-h2: 28px;
+    --font-size-base: 20px;
+
+    --header-height: 90px;
+  }
+
+  @include mobile-l {
+    --header-height: 65px;
+    --padding-inline: 15px;
+  }
+}
