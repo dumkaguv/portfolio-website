@@ -67,7 +67,45 @@
 
       @include hover {
         color: color-mix(in hsl, var(--color-accent), white 18%);
+      }
+    }
 
+    &-technologies {
+      &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        box-shadow: var(--box-shadow-inset-2);
+        border: 1.5px solid transparent;  
+        transition-duration: 0.25s;
+
+        @include hover {
+          border-color: var(--color-accent-alt);
+        }
+
+        @include desktop-s {
+          width: 48px;
+          height: 48px;
+        }
+      }
+
+      &-image {
+        height: 32px;
+        width: 32px;
+
+        @include desktop-s {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }

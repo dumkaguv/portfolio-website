@@ -8,6 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png" />
     <script src="./scripts/main.js" type="module" defer></script>
     <title>Dmitrii Golovicichin</title>
   </head>
@@ -39,20 +40,20 @@
             class="header__burger-button button button--icon glass-block"
             data-js-menu-open-button
           >
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="visually-hidden">Open menu</span>
           </button>
         </div>
         <div class="header__menu-outer">
           <nav class="header__menu">
             <ul class="header__menu-list">
               <li class="header__menu-item">
-                <a href="#about" class="header__menu-link">Обо мне</a>
+                <a href="#about" class="header__menu-link">About me</a>
               </li>
               <li class="header__menu-item">
-                <a href="#portfolio" class="header__menu-link">Портфолио</a>
+                <a href="#portfolio" class="header__menu-link">Portfolio</a>
               </li>
               <li class="header__menu-item">
-                <a href="#footer" class="header__menu-link">Контакты</a>
+                <a href="#footer" class="header__menu-link">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -70,20 +71,21 @@
           </div>
           <div class="hero__title-measures" data-js-hero-title-measures>
             <div class="hero__title-measures-text">
-              <p>Привет! Я Дмитрий и я фронтенд разработчик</p>
+              <p>Hi! I'm Dmitry and I'm a frontend developer</p>
             </div>
             <div class="hero__title-measures-text">
               <p>
-                Верстаю адаптивные интерфейсы с акцентом на детали и чистый код
+                I create adaptive interfaces with an emphasis on details and clean
+                code
               </p>
             </div>
             <div class="hero__title-measures-text">
-              <p>Создаю сайты, которые не только работают, но и впечатляют</p>
+              <p>I create websites that not only work, but are impressive.</p>
             </div>
             <div class="hero__title-measures-text">
               <p>
-                Проектирую современные веб-интерфейсы с упором на удобство и
-                эстетику
+                I design modern web interfaces with an emphasis on usability and
+                aesthetics
               </p>
             </div>
           </div>
@@ -299,7 +301,14 @@
           </div>
           <div class="hero__explore-button-outer">
             <a class="hero__explore-button button glass-block" href="#about">
-              Подробности ниже
+              Details below
+              <img
+                src="./images/down-arrow.svg"
+                width="24"
+                style="margin-left: 12px"
+                height="24"
+                alt=""
+              />
             </a>
           </div>
         </div>
@@ -307,53 +316,52 @@
       <section id="about" class="container about">
         <header class="container__header">
           <h2 class="container__header-title">
-            Кто <span class="highlighted-text">я</span>?
+            Who <span class="highlighted-text">am I</span>?
           </h2>
         </header>
         <div class="container__content">
           <div class="glass-block">
             <p>
-              Я веб-разработчик с фокусом на создание
-              <span class="highlighted-text">адаптивных и современных</span>
-              интерфейсов. Специализируюсь на верстке сайтов с акцентом на
+              I am a web developer with a focus on creating
+              <span class="highlighted-text">adaptive and modern</span>
+              interfaces. I specialize in website layout with an emphasis on
               <span class="highlighted-text"
-                >семантику, доступность и чистый код</span
-              >. Постоянно развиваю навыки во фронтенде, углубляясь в
-              <span class="highlighted-text">JavaScript</span> и изучая лучшие
-              практики <span class="highlighted-text">UI/UX</span>.
+                >semantics, accessibility and clean code</span
+              >. I am constantly developing my front-end skills, delving deeper
+              into <span class="highlighted-text">JavaScript</span> and studying
+              best practices <span class="highlighted-text">UI/UX</span>.
             </p>
             <p>
-              В работе ценю
+              I value it in my work
               <span class="highlighted-text"
-                >структурированный подход, внимание к деталям и читаемый код</span
-              >. Спокойно решаю
-              <span class="highlighted-text">нестандартные задачи</span> и
-              стремлюсь к тому, чтобы результат выглядел
-              <span class="highlighted-text">стильно</span> и работал
-              <span class="highlighted-text">безупречно</span>.
+                >structured approach, attention to detail and readable code</span
+              >. I decide calmly
+              <span class="highlighted-text">non-standard tasks</span> and I strive
+              to make the result look
+              <span class="highlighted-text">stylish</span> and worked
+              <span class="highlighted-text">flawless</span>.
             </p>
-            <p>
-              Сейчас открыт к новым проектам и возможностям для сотрудничества.
-            </p>
+            <p>Now open to new projects and opportunities for cooperation.</p>
           </div>
           <div class="glass-block">
-            <h3>Мои <span class="highlighted-text">навыки</span>:</h3>
+            <h3>My <span class="highlighted-text">skills</span>:</h3>
             <ul class="list">
               <li class="list__item">
-                <span class="highlighted-text">HTML5</span>, семантика и
-                доступность
+                <span class="highlighted-text">HTML5</span>, semantics and
+                accessibility
               </li>
               <li class="list__item">
-                <span class="highlighted-text">CSS3</span>, Flexbox, Grid, анимации
+                <span class="highlighted-text">CSS3</span>, Flexbox, Grid,
+                animations
               </li>
               <li class="list__item">
                 <span class="highlighted-text">JavaScript (ES6+)</span>, DOM,
-                события
+                events
               </li>
               <li class="list__item">
-                <span class="highlighted-text">Git</span>, работа с репозиториями
+                <span class="highlighted-text">Git</span>, work with repositories
               </li>
-              <li class="list__item">Базовый PHP, SQL, Python</li>
+              <li class="list__item">Basic PHP, SQL, Python</li>
             </ul>
           </div>
         </div>
@@ -361,7 +369,7 @@
       <section id="portfolio" class="container portfolio">
         <header class="container__header">
           <h2 class="container__header-title">
-            Мои <span class="highlighted-text">работы</span>
+            My <span class="highlighted-text">Portfolio</span>
           </h2>
         </header>
         <div class="portfolio__slider slider" data-js-portfolio-slider>
@@ -375,7 +383,7 @@
               />
               <div class="slider__item-info">
                 <h3 class="slider__item-title">
-                  Дизайнерский лендинг <br />
+                  Designer landing <br />
                   <a
                     title="Open the website in a new tab"
                     class="slider__item-link highlighted-text"
@@ -385,9 +393,61 @@
                   >
                 </h3>
                 <p class="slider__item-description">
-                  Адаптивная вёрстка сайта для AI-сервиса с акцентом на визуальные
-                  элементы.
+                  Adaptive website layout for an AI service with an emphasis on
+                  visual elements.
                 </p>
+                <ul class="slider__item-technologies-list">
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/js.svg"
+                      width="32"
+                      height="32"
+                      title="JavaScript"
+                      alt="JavaScript"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/html.svg"
+                      width="32"
+                      height="32"
+                      title="HTML5"
+                      alt="HTML5"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/scss.svg"
+                      width="32"
+                      height="32"
+                      title="SCSS"
+                      alt="SCSS"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/webpack.svg"
+                      width="32"
+                      height="32"
+                      title="Webpack"
+                      alt="Webpack"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/figma.svg"
+                      width="32"
+                      height="32"
+                      title="Figma"
+                      alt="Figma"
+                    />
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="slider__item glass-block">
@@ -399,7 +459,7 @@
               />
               <div class="slider__item-info">
                 <h3 class="slider__item-title">
-                  Онлайн магазин <br />
+                  Online store <br />
                   <a
                     title="Open the website in a new tab"
                     class="slider__item-link highlighted-text"
@@ -411,6 +471,78 @@
                 <p class="slider__item-description">
                   Fullstack shop with search, auth, payment, filters and more.
                 </p>
+                <ul class="slider__item-technologies-list">
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/nextjs.svg"
+                      width="32"
+                      height="32"
+                      title="NextJs"
+                      alt="NextJs"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/react.svg"
+                      width="32"
+                      height="32"
+                      title="React"
+                      alt="React"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/typescript.svg"
+                      width="32"
+                      height="32"
+                      title="TypeScript"
+                      alt="TypeScript"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/redux.svg"
+                      width="32"
+                      height="32"
+                      title="Redux"
+                      alt="Redux"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/tailwind-css.svg"
+                      width="32"
+                      height="32"
+                      title="Tailwind CSS"
+                      alt="Tailwind CSS"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/shadcn.svg"
+                      width="32"
+                      height="32"
+                      title="ShadCN"
+                      alt="ShadCN"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/prisma.svg"
+                      width="32"
+                      height="32"
+                      title="Prisma"
+                      alt="Prisma"
+                    />
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="slider__item glass-block">
@@ -424,11 +556,11 @@
               </div>
               <div class="slider__item-info">
                 <h3 class="slider__item-title">
-                  Многоэтапная форма <br />
+                  Multi-step form <br />
                   <a
                     title="Open the website in a new tab"
                     class="slider__item-link highlighted-text"
-                    href="dumkaguv.github.io/Multi-Step-Form/"
+                    href="https://dumkaguv.github.io/Multi-Step-Form/"
                     target="_blank"
                     >Multi Step Form</a
                   >
@@ -436,6 +568,126 @@
                 <p class="slider__item-description">
                   Multi-step form with inputs, errors, checkboxes and switches
                 </p>
+                <ul class="slider__item-technologies-list">
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/js.svg"
+                      width="32"
+                      height="32"
+                      title="JavaScript"
+                      alt="JavaScript"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/html.svg"
+                      width="32"
+                      height="32"
+                      title="HTML5"
+                      alt="HTML5"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/scss.svg"
+                      width="32"
+                      height="32"
+                      title="SCSS"
+                      alt="SCSS"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/figma.svg"
+                      width="32"
+                      height="32"
+                      title="Figma"
+                      alt="Figma"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="slider__item glass-block">
+              <div class="slider__item-image-outer">
+                <img
+                  class="slider__item-image"
+                  alt="Show Slaff"
+                  src="./images/portfolio/shopslaff.jpg"
+                  tabindex="0"
+                />
+              </div>
+              <div class="slider__item-info">
+                <h3 class="slider__item-title">
+                  Online Shop <br />
+                  <a
+                    title="Open the website in a new tab"
+                    class="slider__item-link highlighted-text"
+                    href="https://shop-slaff.vercel.app/"
+                    target="_blank"
+                    >Shop Slaff</a
+                  >
+                </h3>
+                <p class="slider__item-description">
+                  Frontend shop with search, filters, pagination, cart, favorites
+                  and more.
+                </p>
+                <ul class="slider__item-technologies-list">
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/react.svg"
+                      width="32"
+                      height="32"
+                      title="React"
+                      alt="React"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/typescript.svg"
+                      width="32"
+                      height="32"
+                      title="TypeScript"
+                      alt="TypeScript"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/tailwind-css.svg"
+                      width="32"
+                      height="32"
+                      title="TailwindCSS"
+                      alt="TailwindCSS"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/redux.svg"
+                      width="32"
+                      height="32"
+                      title="Redux"
+                      alt="Redux"
+                    />
+                  </li>
+                  <li class="slider__item-technologies-item">
+                    <img
+                      class="slider__item-technologies-image"
+                      src="./images/figma.svg"
+                      width="32"
+                      height="32"
+                      title="Figma"
+                      alt="Figma"
+                    />
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>
@@ -445,12 +697,12 @@
               class="slider__rotate-left button button--icon glass-block"
               type="button"
             >
-              <span class="visually-hidden">Предыдущий слайд</span>
+              <span class="visually-hidden">Previous slide</span>
             </button>
             <ul class="slider__pagination-list glass-block">
               <li class="slider__pagination-item">
                 <button class="slider__pagination-button button" type="button">
-                  <span class="visually-hidden">Слайд 1</span>
+                  <span class="visually-hidden">Slide 1</span>
                 </button>
               </li>
             </ul>
@@ -459,7 +711,7 @@
               class="slider__rotate-right button button--icon glass-block"
               type="button"
             >
-              <span class="visually-hidden">Следующий слайд</span>
+              <span class="visually-hidden">Next slide</span>
             </button>
           </div>
         </div>
@@ -468,7 +720,7 @@
     <footer id="footer" class="footer__outer container__outer">
       <div class="glass-block footer container">
         <div class="footer__text">
-          <p>Свяжись со мной — и твой проект оживет на экране!</p>
+          <p>Contact me and your project will come to life on the screen!</p>
         </div>
         <ul class="footer__contacts-list">
           <li class="footer__contacts-item">

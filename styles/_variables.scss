@@ -29,6 +29,9 @@
   --header-height: 160px;
   --padding-inline: 50px;
 
+  --box-shadow-inset-2: inset -2px -2px 4px hsla(0, 0%, 100%, 0.1),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
   @include desktop-s {
     --font-size-h1: 50px;
     --font-size-h2: 42px;

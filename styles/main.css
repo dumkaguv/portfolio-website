@@ -248,6 +248,8 @@ a {
   --font-size-base: 26px;
   --header-height: 160px;
   --padding-inline: 50px;
+  --box-shadow-inset-2: inset -2px -2px 4px hsla(0, 0%, 100%, 0.1),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 1279px) {
   :root {
@@ -968,6 +970,43 @@ body.loaded .notebook__screen {
 @media (hover: hover) {
   .slider__item-link:hover {
     color: color-mix(in hsl, var(--color-accent), white 18%);
+  }
+}
+.slider__item-technologies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.slider__item-technologies-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow-inset-2);
+  border: 1.5px solid transparent;
+  transition-duration: 0.25s;
+}
+@media (hover: hover) {
+  .slider__item-technologies-item:hover {
+    border-color: var(--color-accent-alt);
+  }
+}
+@media (max-width: 1279px) {
+  .slider__item-technologies-item {
+    width: 48px;
+    height: 48px;
+  }
+}
+.slider__item-technologies-image {
+  height: 32px;
+  width: 32px;
+}
+@media (max-width: 1279px) {
+  .slider__item-technologies-image {
+    width: 24px;
+    height: 24px;
   }
 }
 .slider__controls {
