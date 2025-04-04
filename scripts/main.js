@@ -1,6 +1,9 @@
 import { HeroTitleAnimator } from "./HeroTitleAnimator.js";
 import { Slider } from "./Slider.js";
 import { Modal } from "./Modal.js";
+import { Theme } from "./Theme.js";
+
+new Theme();
 
 function updateBodyScroll() {
   let scrollTop = documentEl.scrollTop;
@@ -62,6 +65,7 @@ setTimeout(() => {
 
 menuOpenButtonEl.onclick = () => {
   headerEl.classList.toggle("open");
+  menuOpenButtonEl.classList.toggle("open");
 };
 
 headerEl.onscroll = () => {

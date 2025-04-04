@@ -64,7 +64,11 @@ export class Modal {
   };
 
   handlePressedKey = (event) => {
-    if (event.key === "Enter" && !this.isOpen) {
+    if (
+      event.key === "Enter" &&
+      event.target.closest(".slider__item-image") &&
+      !this.isOpen
+    ) {
       this.openModal();
     }
 

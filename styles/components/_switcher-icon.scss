@@ -1,0 +1,32 @@
+.switcher__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  &-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.switcher-icon {
+  color: rgb(232, 232, 232);
+  z-index: 10;
+}
+
+.moon {
+  color: white;
+}
+
+.sun {
+  color: white;
+}
+
+
+[data-theme="light"] .sun {
+  color: black;
+}

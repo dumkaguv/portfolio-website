@@ -12,7 +12,7 @@
 
   &-logo {
     text-transform: uppercase;
-    color: var(--color-light);
+    color: white;
     font-weight: var(--font-weight-high);
   }
 
@@ -64,31 +64,32 @@
 
     transform: perspective(130cqw) rotateX(3deg) translateZ(0);
     z-index: 1;
-    box-shadow: 0 1cqw 0 -0.5cqw var(--color-dark);
+    box-shadow: 0 1cqw 0 -0.5cqw #140e33;
 
     &-logo {
       font-size: 1.5cqw;
       position: absolute;
       bottom: 0.4cqw;
       left: 50%;
+      color: white;
       transform: translateX(-50%);
     }
 
     @keyframes notebook__top--opening {
       0% {
         transform: perspective(130cqw) rotateX(-110deg);
-        box-shadow: 0 -1cqw 0 -0.5cqw var(--color-dark),
-          0 -2cqw 0 -1cqw var(--color-dark), 0 -3cqw 0 -1.5cqw var(--color-dark);
+        box-shadow: 0 -1cqw 0 -0.5cqw #140e33,
+          0 -2cqw 0 -1cqw #140e33, 0 -3cqw 0 -1.5cqw #140e33;
       }
     }
   }
 
   &__bottom {
     transform: translateZ(0) perspective(130cqw) rotateX(-110deg);
-    box-shadow: 0 -1cqw 0 -0.5cqw var(--color-dark),
-      0 -1.5cqw 0 -0.75cqw var(--color-dark), 0 -2cqw 0 -1cqw var(--color-dark),
-      0 -2.5cqw 0 -1.25cqw var(--color-dark), 0 -3cqw 0 -1.5cqw var(--color-dark),
-      0 -3.5cqw 0 -1.75cqw var(--color-dark);
+    box-shadow: 0 -1cqw 0 -0.5cqw #140e33,
+      0 -1.5cqw 0 -0.75cqw #140e33, 0 -2cqw 0 -1cqw #140e33,
+      0 -2.5cqw 0 -1.25cqw #140e33, 0 -3cqw 0 -1.5cqw #140e33,
+      0 -3.5cqw 0 -1.75cqw #140e33;
     top: 1cqw;
     display: grid;
     grid-template-columns: 1fr;
@@ -120,7 +121,8 @@
       width: 3.5cqw;
       height: 3cqw;
       border-radius: 0.5cqw;
-      background-color: var(--color-dark);
+      background-color: #140e33;
+      color: white;
       font-weight: var(--font-weight-high);
 
       &--1 {
@@ -155,7 +157,7 @@
     &-top,
     &-left,
     &-right {
-      background-color: var(--color-dark);
+      background-color: #140e33;
     }
 
     &-top {
@@ -183,6 +185,7 @@
     justify-content: stretch;
     padding: 3cqw;
     gap: 1cqw;
+    background-color: var(--color-light-alt) !important;
 
     body.loaded & {
       animation: notebook__top-screen--light-up 0.5s

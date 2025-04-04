@@ -56,7 +56,7 @@
     &--hiding {
       animation: hiding 1.7s both;
     }
-    
+
     @keyframes hiding {
       to {
         opacity: 0;
@@ -79,10 +79,19 @@
   }
 
   &__explore-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     opacity: 1;
 
     body.loaded & {
-      animation: appearing .8s calc(var(--notebook-appearing-delay) + var(--notebook-top-opening-delay) + var(--notebook-screen-light-up-delay) + var(--hero-button-delay)) both;
+      animation: appearing 0.8s
+        calc(
+          var(--notebook-appearing-delay) + var(--notebook-top-opening-delay) +
+            var(--notebook-screen-light-up-delay) + var(--hero-button-delay)
+        )
+        both;
     }
 
     &-outer {

@@ -69,6 +69,12 @@
         color: color-mix(in hsl, var(--color-accent), white 18%);
       }
     }
+    
+    &-description {
+      @include desktop-s {
+        font-size: 21px;
+      }
+    }
 
     &-technologies {
       &-list {
@@ -85,7 +91,7 @@
         height: 64px;
         border-radius: 50%;
         box-shadow: var(--box-shadow-inset-2);
-        border: 1.5px solid transparent;  
+        border: 1.5px solid transparent;
         transition-duration: 0.25s;
 
         @include hover {

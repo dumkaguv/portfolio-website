@@ -31,7 +31,10 @@
 
   --box-shadow-inset-2: inset -2px -2px 4px hsla(0, 0%, 100%, 0.1),
     inset 2px 2px 4px rgba(0, 0, 0, 0.5);
-    
+
+  --box-shadow-4: -4px -4px 12px hsla(0, 0%, 86%, 0.603),
+    8px 8px 12px rgba(0, 0, 0, 0.05);
+
   @include desktop-s {
     --font-size-h1: 50px;
     --font-size-h2: 42px;

@@ -8,6 +8,47 @@ html {
   }
 }
 
+[data-theme="dark"] {
+  --color-light: #140e33;
+  --color-light-trans: #191820;
+  --color-light-alt: #14141a;
+
+  --color-dark: #ffffff;
+  --color-dark-trans: #3b3b3b53;
+
+  --box-shadow-4: -4px -4px 8px hsla(0, 0%, 15%, 0.903),
+    8px 8px 12px hsla(0, 0%, 7%, 0.825);
+}
+
+[data-theme="light"] {
+  --scrollbar-bg: #f0f0f0;
+  --scrollbar-thumb: #888;
+  --scrollbar-thumb-hover: #666;
+}
+
+[data-theme="dark"] {
+  --scrollbar-bg: #2a2a2a;
+  --scrollbar-thumb: #555;
+  --scrollbar-thumb-hover: #777;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
 body {
   --backgroundParallax: 0;
 
@@ -52,7 +93,7 @@ h2 {
 }
 
 :focus-visible {
-  outline: 4px dashed black;
+  outline: 4px dashed var(--color-dark);
   outline-offset: 4px;
   transition-duration: 0s !important;
 }

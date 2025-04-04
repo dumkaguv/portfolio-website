@@ -8,11 +8,19 @@
       gap: 40px;
       aspect-ratio: 51 / 20;
 
+      @include tablet-l {
+        height: 400px;
+      }
+
       @include tablet-s {
         aspect-ratio: auto;
-        height: calc(220px + 55cqw);
+        height: 800px;
         flex-direction: column;
         gap: 20px;
+      }
+
+      @include mobile-l {
+        height: 560px;
       }
 
       &-image {
