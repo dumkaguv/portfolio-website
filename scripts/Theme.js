@@ -44,7 +44,13 @@ export class Theme {
   setInitialPositionSlider = () => {
     if (this.getSavedTheme() === "light") {
       this.slideSwitcher();
-    } 
+    }
+  };
+
+  onThemeSwitcherKeydown = (event) => {
+    if (event.key === "Enter") {
+      this.onThemeSwitcherClick();
+    }
   };
 
   onThemeSwitcherClick = (event) => {
@@ -58,6 +64,7 @@ export class Theme {
 
   bindEvents = () => {
     this.rootElement.addEventListener("click", this.onThemeSwitcherClick);
+    this.rootElement.addEventListener("keydown", this.onThemeSwitcherKeydown);
   };
 
   getSavedTheme = () => {

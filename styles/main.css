@@ -1040,7 +1040,6 @@ body.loaded .notebook__screen {
   margin-left: 0.3em;
   margin-top: 0.1em;
   background: url("../images/link.svg") 50%/contain no-repeat;
-  z-index: 1;
 }
 @media (hover: hover) {
   .slider__item-link:hover {
@@ -1143,6 +1142,22 @@ body.loaded .notebook__screen {
 .slider__pagination-button:active {
   transition: scale 0.1s;
   scale: 0.9;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1023px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .about__skills:nth-child(2) {
+    margin-top: 10px;
+    border-top: 1px solid var(--color-accent);
+  }
 }
 
 .header {

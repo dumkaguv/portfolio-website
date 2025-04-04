@@ -1,0 +1,15 @@
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @include tablet-l {
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    &__skills:nth-child(2) {
+      margin-top: 10px;
+      border-top: 1px solid var(--color-accent);
+    }
+  }
+}
