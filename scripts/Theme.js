@@ -1,3 +1,4 @@
+const rootSelector = "[data-js-theme-switcher]";
 const THEME_KEY = "user-theme";
 
 export class Theme {
@@ -12,8 +13,8 @@ export class Theme {
     checked: "checked",
   };
 
-  constructor() {
-    this.rootElement = document.querySelector(this.selectors.root);
+  constructor(rootElement) {
+    this.rootElement = rootElement;
     this.sliderElement = this.rootElement.querySelector(this.selectors.slider);
     this.iconSunElement = this.rootElement.querySelector(this.selectors.iconSun);
     this.iconMoonElement = this.rootElement.querySelector(this.selectors.iconMoon);
@@ -77,5 +78,17 @@ export class Theme {
   init = () => {
     this.applyTheme(this.getSavedTheme());
     this.setInitialPositionSlider();
+  };
+}
+
+export class ThemeCollection {
+  constructor() {
+    this.init();
+  }
+
+  init = () => {
+    document
+      .querySelectorAll(rootSelector)
+      .forEach((rootElement) => new Theme(rootElement));
   };
 }

@@ -13,6 +13,19 @@
   }
 }
 
+.switcher {
+  &-mobile {
+    display: none;
+    
+    @include tablet-s {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
 .switcher-icon {
   color: rgb(232, 232, 232);
   z-index: 10;
@@ -25,7 +38,6 @@
 .sun {
   color: white;
 }
-
 
 [data-theme="light"] .sun {
   color: black;

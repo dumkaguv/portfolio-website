@@ -1,9 +1,9 @@
 import { HeroTitleAnimator } from "./HeroTitleAnimator.js";
 import { Slider } from "./Slider.js";
 import { Modal } from "./Modal.js";
-import { Theme } from "./Theme.js";
+import { ThemeCollection } from "./Theme.js";
 
-new Theme();
+new ThemeCollection();
 
 function updateBodyScroll() {
   let scrollTop = documentEl.scrollTop;
