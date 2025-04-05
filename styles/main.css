@@ -299,6 +299,12 @@ a {
   overflow: hidden !important;
 }
 
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
 .container {
   line-height: 1.5;
   max-width: calc(1600px - var(--padding-inline) * 2);
@@ -355,9 +361,12 @@ a {
 html {
   scroll-padding-block: var(--header-height);
 }
-
 html.is-lock {
   overflow: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 [data-theme=dark] {
@@ -1495,7 +1504,7 @@ body.loaded .hero__explore-button {
 }
 @media (max-width: 479px) {
   .portfolio .slider__item {
-    height: 560px;
+    height: 575px;
   }
 }
 .portfolio .slider__item-image {

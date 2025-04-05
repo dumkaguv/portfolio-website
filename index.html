@@ -2,11 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="theme-color"
+      content="#000000"
+      media="(prefers-color-scheme: dark)"
+    />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png" />
     <script src="./scripts/main.js" type="module" defer></script>
@@ -107,7 +110,7 @@
           </nav>
         </div>
         <div
-          class="header__theme-switcher-outer"
+          class="header__theme-switcher-outer hidden-mobile"
           title="Switch theme"
           data-js-theme-switcher
           tabindex="0"
@@ -403,11 +406,11 @@
       </section>
       <section id="about" class="container">
         <header class="container__header">
-          <h2 class="container__header-title">
+          <h2 class="container__header-title" data-aos="fade-right">
             Who <span class="highlighted-text">am I</span>?
           </h2>
         </header>
-        <div class="container__content">
+        <div class="container__content" data-aos="fade-right">
           <div class="glass-block">
             <p>
               I am a web developer with a focus on creating
@@ -431,7 +434,7 @@
             </p>
             <p>Now open to new projects and opportunities for cooperation.</p>
           </div>
-          <div class="glass-block about">
+          <div class="glass-block about" data-aos="fade-up">
             <div class="about__skills">
               <h3>My <span class="highlighted-text">hard</span> skills:</h3>
               <ul class="list">
@@ -497,7 +500,7 @@
           </div>
         </div>
       </section>
-      <section id="portfolio" class="container portfolio">
+      <section id="portfolio" class="container portfolio" data-aos="zoom-in">
         <header class="container__header">
           <h2 class="container__header-title">
             My <span class="highlighted-text">Portfolio</span>
@@ -889,7 +892,7 @@
         </div>
       </section>
     </main>
-    <footer id="footer" class="footer__outer container__outer">
+    <footer id="footer" class="footer__outer container__outer" data-aos="fade-up">
       <div class="glass-block footer container">
         <div class="footer__text">
           <p>Contact me and your project will come to life on the screen!</p>

@@ -2,6 +2,15 @@ import { HeroTitleAnimator } from "./HeroTitleAnimator.js";
 import { Slider } from "./Slider.js";
 import { Modal } from "./Modal.js";
 import { ThemeCollection } from "./Theme.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+window.addEventListener("DOMContentLoaded", () => {
+  AOS.init({
+    duration: 450,
+    once: true,
+  });
+});
 
 new ThemeCollection();
 

@@ -1,11 +1,13 @@
 html {
   scroll-padding-block: var(--header-height);
-}
 
-html {
   &.is-lock {
     overflow: hidden;
   }
+}
+
+body {
+  overflow-x: hidden;
 }
 
 [data-theme="dark"] {

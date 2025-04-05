@@ -1,9 +1,14 @@
 {
   "devDependencies": {
+    "aos": "^2.3.4",
     "chokidar-cli": "^3.0.0",
-    "sass": "^1.85.0"
+    "sass": "^1.85.0",
+    "vite": "^6.2.5",
+    "vite-plugin-html-minify": "^1.0.0"
   },
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
     "prefix": "postcss ./styles/main.css --use autoprefixer -o ./styles/main_prefixed.css",
     "watch": "npx chokidar \"./styles/main.css\" -c \"npm run prefix\" --usePolling"
   },

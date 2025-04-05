@@ -11,6 +11,12 @@
   overflow: hidden !important;
 }
 
+.hidden-mobile {
+  @include tablet-s {
+    display: none !important;
+  }
+}
+
 .container {
   line-height: 1.5;
   max-width: calc(1600px - var(--padding-inline) * 2);
