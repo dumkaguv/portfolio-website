@@ -229,8 +229,9 @@ a {
   --color-light-alt: #f1f1f1;
   --color-dark: #140e33;
   --color-dark-trans: #140e3355;
-  --color-accent: #4332a1;
-  --color-accent-alt: #3c2d8f;
+  --color-accent: #7765dc;
+  --color-accent-alt: #423399;
+  --color-notebook: #4332a1;
   --header-appearing-delay: 0.7s;
   --header-logo-delay: 7s;
   --notebook-appearing-delay: 1.1s;
@@ -773,7 +774,7 @@ body.loaded .notebook {
   translate: -50%;
   width: 70%;
   aspect-ratio: 16/9;
-  background-color: var(--color-accent);
+  background-color: var(--color-notebook);
   border-radius: 2.3cqw;
   transform-origin: bottom center;
 }
