@@ -36,15 +36,33 @@ export class Modal {
   };
 
   openModal = () => {
+    this.scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${this.scrollPosition}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.overflow = "hidden";
+
     this.modalElement.classList.add(this.stateClasses.open);
     this.isOpen = true;
-    document.documentElement.classList.add("is-lock");
   };
 
   closeModal = () => {
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.overflow = "";
+
+    window.scrollTo({
+      top: this.scrollPosition,
+      left: 0,
+      behavior: "instant",
+    });
+
     this.modalElement.classList.remove(this.stateClasses.open);
     this.isOpen = false;
-    document.documentElement.classList.remove("is-lock");
   };
 
   setImage = () => {
