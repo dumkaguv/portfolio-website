@@ -31,7 +31,7 @@
     border-right: none;
   }
 
-  @include tablet-s {
+  @include tablet-l {
     --smallHeight: var(--header-height);
 
     flex-direction: column;
@@ -70,7 +70,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
 
     @include desktop-s {
       padding-inline: 0;
@@ -78,7 +78,7 @@
   }
 
   &__logo-outer {
-    @include tablet-s {
+    @include tablet-l {
       display: flex;
       align-self: stretch;
       flex-shrink: 0;
@@ -90,8 +90,8 @@
 
   &__menu {
     &-outer {
-      @include tablet-s {
-        flex-shrink: 0;
+      @include tablet-l {
+        flex-shrink: 0; 
         height: calc(100dvh - var(--header-height) - 1px);
         display: flex;
         align-items: center;
@@ -101,21 +101,18 @@
     &-list {
       display: flex;
       align-items: center;
-      gap: 2em;
+      gap: 1em;
 
       @include tablet-l {
-        column-gap: 0.5em;
-      }
-
-      @include tablet-s {
         flex-direction: column;
+        gap: 12px;
       }
     }
 
     &-link {
-      padding: 1em 1.2em;
+      padding: 1em 0.9em;
       position: relative;
-      z-index: 1;
+      z-index: 100;
       transition: color 0.2s;
 
       &::before {
@@ -146,7 +143,7 @@
       display: none;
       transition-duration: 0.25s;
 
-      @include tablet-s {
+      @include desktop-l {
         display: grid;
         align-content: center;
         justify-content: center;

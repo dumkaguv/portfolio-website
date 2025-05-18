@@ -3,6 +3,8 @@
   --color-light-trans: rgba(255, 255, 255, 0.93);
   --color-light-alt: #f1f1f1;
 
+  --color-light-card: #ececec;
+
   --color-dark: #140e33;
   --color-dark-trans: #140e3355;
 
@@ -30,13 +32,35 @@
   --font-size-base: 26px;
 
   --header-height: 160px;
-  --padding-inline: 50px;
+  --padding-inline: 40px;
+
+  --color-circle-work-exp: #f3f3f3;
+
+  --c-dark-for-shadow: #000;
+
+  --box-shadow-inset: inset -22px -14px 14px 2px hsla(0, 0%, 100%, 0.015),
+    inset 8px 4px 20px 12px rgba(0, 0, 0, 0.8);
+
+  --box-shadow-inset-transparent: inset -22px -14px 14px 2px hsla(0, 0%, 100%, 0),
+    inset 8px 4px 20px 12px transparent;
+
+  --box-shadow-inset-2-transparent: inset -2px -2px 4px hsla(0, 0%, 100%, 0),
+    inset 2px 2px 4px transparent;
 
   --box-shadow-inset-2: inset -2px -2px 4px hsla(0, 0%, 100%, 0.1),
     inset 2px 2px 4px rgba(0, 0, 0, 0.5);
 
-  --box-shadow-4: -4px -4px 12px hsla(0, 0%, 86%, 0.603),
+  --box-shadow-3: -4px -4px 12px hsla(0, 0%, 100%, 0.05),
+    4px 4px 12px var(--c-dark-for-shadow);
+
+  --box-shadow-3-transparent: -4px -4px 12px hsla(0, 0%, 100%, 0),
+    4px 4px 12px transparent;
+
+  --box-shadow-4: -8px -8px 12px hsla(0, 0%, 100%, 0.8),
     8px 8px 12px rgba(0, 0, 0, 0.05);
+
+  --box-shadow-4-transparent: -8px -8px 12px hsla(0, 0%, 100%, 0),
+    8px 8px 12px transparent;
 
   @include desktop-s {
     --font-size-h1: 50px;

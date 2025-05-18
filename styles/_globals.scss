@@ -14,13 +14,23 @@ body {
   --color-light: #140e33;
   --color-light-trans: #191820;
   --color-light-alt: #14141a;
+  --color-light-card: #191820;
 
   --color-dark: #ffffff;
   --color-dark-trans: #3b3b3b53;
 
+  --color-circle-work-exp: #191820;
+
+
+
+  --box-shadow-inset-2-transparent: inset -22px -14px 14px 2px hsla(0, 0%, 100%, 0),
+    inset 8px 4px 20px 12px transparent;
 
   --box-shadow-4: -4px -4px 8px hsla(0, 0%, 15%, 0.903),
     8px 8px 12px hsla(0, 0%, 7%, 0.825);
+
+  --box-shadow-4-transparent: -4px -4px 12px hsla(0, 0%, 100%, 0),
+    4px 4px 12px transparent;
 }
 
 [data-theme="light"] {
