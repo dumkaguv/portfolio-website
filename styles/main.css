@@ -1476,6 +1476,13 @@ body.loaded .header {
     margin-inline: auto;
   }
 }
+.hero__explore-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
 .hero__explore-button {
   display: flex;
   align-items: center;

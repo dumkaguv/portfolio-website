@@ -78,6 +78,13 @@
     }
   }
 
+  &__explore-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
   &__explore-button {
     display: flex;
     align-items: center;
