@@ -559,6 +559,14 @@ h2 {
   color: black;
 }
 
+body {
+  overflow-y: hidden;
+}
+
+body.loaded {
+  overflow-y: scroll;
+}
+
 .curtain {
   position: fixed;
   inset: 0;
